@@ -1,17 +1,20 @@
-import React from 'react'
 import { useSelector } from 'react-redux'
 import AddTutorial from './AddTutorialForm'
 import SingleTutorial from './SingleTutorial'
 
 const TutorialList = () => {
-    const tutorial=useSelector((state)=>state.tutorial)
-    // console.log(tutorial)
+
+  const tutorial=useSelector((state)=>state.tutorial)
+
+ 
   return (
     <div>
         <AddTutorial/>
         {tutorial?.map((item)=>{
           return(
-            <SingleTutorial key={item.id} item={item}/>
+            <div className='container row m-auto tutorial-list'>
+              <SingleTutorial key={item.id} item={item}/>
+            </div>
           )
         })}
     </div>

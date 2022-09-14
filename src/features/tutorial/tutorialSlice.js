@@ -1,7 +1,14 @@
 import { createSlice } from "@reduxjs/toolkit";
 
 
-const initialState=[]
+let initialState=[]
+
+
+if(localStorage.getItem("tutorial")){
+    initialState=initialState.concat(JSON.parse(localStorage.getItem("tutorial")))
+}else{
+    initialState=[]
+}
 
 const tutorialSlice=createSlice({
     name:"tutorial",
@@ -9,14 +16,17 @@ const tutorialSlice=createSlice({
     reducers:{
         addNewTutorial(state,{payload}){
             state.push(payload)
+            localStorage.setItem("tutorial",JSON.stringify(state))
         },
         editTutorial(state,{payload}){
             const {newTitle,newContent,id}=payload;
            const edittedPost=state.find((item)=>item.id === id)
            state=[...state,edittedPost.title=newTitle,edittedPost.content=newContent]
+           localStorage.setItem("tutorial",JSON.stringify(state))
         },
         removeTutorial(state,{payload}){
             state=state.filter((item)=>item.id!==payload)
+            localStorage.setItem("tutorial",JSON.stringify(state))
         }
     }
 })

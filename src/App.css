@@ -1,5 +1,225 @@
+@import url('https://fonts.googleapis.com/css?family=Titan+One');
 *{
     margin:0;
     padding:0;
     box-sizing:border-box;
+}
+
+.tutorial-list{
+    max-width: 50rem !important;
+}
+
+
+h1{
+	width:360px;
+	height:100%;
+	display:flex;
+	font-family:'Titan One',cursive;
+	font-size:70px !important;
+	font-weight:700 !important;
+	flex-flow:row wrap;
+	align-content:center;
+	justify-content:center;
+    position:relative;
+    line-height: 60px !important;
+	}
+
+
+h1 span:before{
+	/* background:linear-gradient(45deg,#fc5c7d,#6a82fb); */
+    background-color: #6a82fb;
+	width:100%;
+	height:100%;
+	display:block;
+	position:absolute;
+	content:"";
+	mix-blend-mode:screen
+	}
+
+[class*="blobs"]
+	{mix-blend-mode:color;animation:blobs 15s ease-in-out infinite alternate;display:block;position: absolute;}
+
+.blobs_1{
+	background:#ff1493;
+	width:60px;
+	height:60px;
+	top:40%;
+	left:5%;
+	}
+
+.blobs_2{
+	background:#ff4500;
+	width:80px;
+	height:60px;
+	top:20%;
+	left:70%;
+	} 
+
+.blobs_3{
+	background:#00ff00;
+	width:60px;
+	height:60px;
+	top:-10%;
+	left:15%;
+	}
+
+.blobs_4{
+	background:#ff0000;
+	width:100px;
+	height:60px;
+	top:37%;
+	left:25%;
+	}
+
+.blobs_5{
+	background:#fde404;
+	width:50px;
+	height:50px;
+	top:-10%;
+	left:40%;
+	}
+
+.blobs_6{
+	background:#00ffff;
+	width:60px;
+	height:60px;
+	top:65%;
+	left:60%;
+	}
+
+.blobs_7{
+	background:#ff8c00;
+	width:50px;
+	height:50px;
+	top:60%;
+	left:90%;
+	} 
+
+@keyframes blobs{
+	0%{border-radius:26% 74% 61% 39% / 54% 67% 33% 46%}
+	10%{border-radius:74% 26% 47% 53% / 68% 46% 54% 32%}
+	20%{border-radius:48% 52% 30% 70% / 27% 37% 63% 73%}
+	30%{border-radius:73% 27% 57% 43% / 28% 67% 33% 72%}
+	40%{border-radius:63% 37% 56% 44% / 25% 28% 72% 75%}
+	50%{border-radius:39% 61% 70% 30% / 61% 29% 71% 39%}
+	60%{border-radius:27% 73% 29% 71% / 73% 51% 49% 27%}
+	70%{border-radius:39% 61% 65% 35% / 74% 65% 35% 26%}
+	80%{border-radius:55% 45% 37% 63% / 38% 30% 70% 62%}
+	90%{border-radius:25% 75% 70% 30% / 39% 50% 50% 61%}
+	100%{border-radius:66% 34% 33% 67% / 65% 73% 27% 35%}
+	}
+form{
+    width: 100%;
+    max-width: 40rem;
+    margin-top: 340px!important;
+}
+form>div{
+    width: 100%;
+    max-width: 40rem;
+}
+
+/* form>div:not(form>div:last-child){
+    display: grid !important;
+    grid-template-columns: 20% 80%;
+} */
+#tutorialTitle{
+    width: 100% !important;
+}
+form label{
+    display: block !important;
+}
+textarea{
+    display: block;
+    width: 100% !important;
+    height: 8rem !important;
+    resize: none !important;
+    overflow: auto;
+}
+.card-title{
+    overflow:hidden; 
+    white-space:nowrap; 
+    text-overflow: ellipsis;
+}
+.singleTutorial>button{
+    height: 32px;
+}
+.btn-div{
+    display: flex; 
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    animation: fadeIn 500ms reverse;
+}
+.main-detail{
+    max-width: 50rem !important;
+}
+.detail-title,.detail-content{
+    white-space: pre-wrap;
+    word-break: break-word;
+    text-indent: 20px;
+}
+.gooey{
+    background-image: linear-gradient(120deg, rgba(0,67,255,.55) 0%, rgba(0,103,255,.89) 100%);
+    border-radius: 42% 58% 70% 30% / 45% 45% 55% 55%;
+    width: 100px; 
+    height: 70px;
+    animation: morph 3s linear infinite; 
+    transform-style: preserve-3d;
+    will-change: border-radius;
+  }
+  .gooey:hover{
+    background-image: linear-gradient(120deg, rgba(233, 12, 122, 0.959) 0%, rgba(233, 12, 122, 0.959) 100%);
+  }
+  .gooey:before,
+  .gooey:after{
+    content: '';
+    width: 100%;
+    height: 100%;
+    display: block;
+    position: absolute;
+    left: 0; top: 0;
+    border-radius: 42% 58% 70% 30% / 45% 45% 55% 55%;
+    will-change: border-radius, transform, opacity;
+    animation-delay: 200ms;
+  }
+  
+  .gooey:before{
+    animation: morph 3s linear infinite;
+    opacity: .21;
+    animation-duration: 1.5s;
+  }
+  
+  .gooey:after{
+    animation: morph 3s linear infinite;
+    animation-delay: 400ms;
+    opacity: .89;
+    content: "ADD";
+    line-height: 70px;
+  }
+  
+  @keyframes morph{
+    0%,100%{
+    border-radius: 42% 58% 70% 30% / 45% 45% 55% 55%;
+      transform: translate3d(0,0,0) rotateZ(0.01deg);
+    }
+    34%{
+        border-radius: 70% 30% 46% 54% / 30% 29% 71% 70%;
+      transform:  translate3d(0,5px,0) rotateZ(0.01deg);
+    }
+    50%{
+      opacity: .89;
+      transform: translate3d(0,0,0) rotateZ(0.01deg);
+    }
+    67%{
+      border-radius: 100% 60% 60% 100% / 100% 100% 60% 60% ;
+      transform: translate3d(0,-3px,0) rotateZ(0.01deg);
+    }
+    
+  }
+  
+  @keyframes fadeIn{
+    100%{
+      transform: scale(1.03);
+      opacity: 0;
+    }
 }
