@@ -26,15 +26,15 @@ const AddTutorial = () => {
 
   return (
     <section className="mt-2 text-center d-flex flex-column align-items-center justify-content-center">
-    <div class="container blob-header text-center d-flex justify-content-center align-items-center">
+    <div className="container blob-header text-center d-flex justify-content-center align-items-center">
 	<h1 className='text-center '><span>ADD A <br></br> TUTORIAL</span>
-	<div class="blobs_1"></div>
-	<div class="blobs_2"></div>
-	<div class="blobs_3"></div>
-	<div class="blobs_4"></div>
-	<div class="blobs_5"></div>
-	<div class="blobs_6"></div>
-	<div class="blobs_7"></div>
+	<div className="blobs_1"></div>
+	<div className="blobs_2"></div>
+	<div className="blobs_3"></div>
+	<div className="blobs_4"></div>
+	<div className="blobs_5"></div>
+	<div className="blobs_6"></div>
+	<div className="blobs_7"></div>
   </h1>
 </div>
     <form className="m-auto d-flex flex-column justify-content-center align-items-center addForm p-2">

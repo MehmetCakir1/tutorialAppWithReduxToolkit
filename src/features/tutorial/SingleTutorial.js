@@ -3,6 +3,7 @@ import { useNavigate } from 'react-router-dom';
 
 const SingleTutorial = ({item}) => {
     const {id,title,content}=item;
+    // console.log(item)
     const navigate=useNavigate()
   return (
         <div className="singleTutorial border border-1 border-secondary p-1 d-flex justify-content-between align-items-center mt-1">

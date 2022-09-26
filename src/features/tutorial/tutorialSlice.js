@@ -14,15 +14,17 @@ const tutorialSlice=createSlice({
     name:"tutorial",
     initialState,
     reducers:{
-        addNewTutorial(state,{payload}){
+        addNewTutorial(state,{payload}) {
             state.push(payload)
             localStorage.setItem("tutorial",JSON.stringify(state))
         },
         editTutorial(state,{payload}){
-            const {newTitle,newContent,id}=payload;
-           const edittedPost=state.find((item)=>item.id === id)
-           state=[...state,edittedPost.title=newTitle,edittedPost.content=newContent]
-           localStorage.setItem("tutorial",JSON.stringify(state))
+            // const {newTitle,newContent,id}=payload;
+           const edittedPost=state.find((item)=>item.id === payload.id)
+        //    state=[...state,{...edittedPost,title:payload.newTitle,content:payload.newContent}]
+        //    localStorage.setItem("tutorial",JSON.stringify(state))
+        state.splice(state.indexOf(edittedPost),1,payload)
+            localStorage.setItem("tutorial",JSON.stringify(state))
         },
         removeTutorial(state,{payload}){
             state=state.filter((item)=>item.id!==payload)

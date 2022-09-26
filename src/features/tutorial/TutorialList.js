@@ -5,7 +5,7 @@ import SingleTutorial from './SingleTutorial'
 const TutorialList = () => {
 
   const tutorial=useSelector((state)=>state.tutorial)
-
+ 
  
   return (
     <div>

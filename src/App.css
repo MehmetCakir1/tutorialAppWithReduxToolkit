@@ -108,12 +108,12 @@ h1 span:before{
 	90%{border-radius:25% 75% 70% 30% / 39% 50% 50% 61%}
 	100%{border-radius:66% 34% 33% 67% / 65% 73% 27% 35%}
 	}
-form{
+.addForm{
     width: 100%;
     max-width: 40rem;
     margin-top: 340px!important;
 }
-form>div{
+.addForm>div{
     width: 100%;
     max-width: 40rem;
 }
@@ -122,13 +122,13 @@ form>div{
     display: grid !important;
     grid-template-columns: 20% 80%;
 } */
-#tutorialTitle{
+.addForm #tutorialTitle{
     width: 100% !important;
 }
-form label{
+.addForm label{
     display: block !important;
 }
-textarea{
+.addForm textarea{
     display: block;
     width: 100% !important;
     height: 8rem !important;
@@ -196,6 +196,36 @@ textarea{
     content: "ADD";
     line-height: 70px;
   }
+  .gooey-2:after{
+    animation: morph 3s linear infinite;
+    animation-delay: 400ms;
+    opacity: .89;
+    content: "EDIT";
+    line-height: 70px;
+  }
+.modal{
+  position: absolute;
+  top: 0;
+  left: 50%;
+  background-color: rgba(0,0,0,0.7)!important;
+  width: 100vw;
+  height: 100vh;
+}
+
+.modal>div{
+  width: 100%;
+  max-width: 40rem;
+  background-color: white !important;
+  padding: 1rem;
+}
+.modal>div input{
+  width: 100%;
+}
+.modal>div textarea{
+  width: 100%;
+  height: 10rem !important;
+  resize: none;
+}
   
   @keyframes morph{
     0%,100%{
